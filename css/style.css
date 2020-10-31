@@ -1,0 +1,352 @@
+html body {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    min-width: 280px;
+}
+
+img {
+    display: inline-block;
+}
+/*плавный переход*/
+a {
+    transition: 0.2s ease-out;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+/* GRID ===================*/
+.container {
+    width: 1140;
+    margin-left: auto;
+    margin-right: auto;
+      
+}
+
+.row {
+    
+}
+
+.row:after {
+    clear: both;
+    content: "";
+/* корректное отображение в браузерах */
+    display: table;
+}
+
+.col-4 {
+    width: 360px;
+    margin-right: 0px;
+    float: left;
+    background-position: center;
+}
+    /* выбираем последнию колонку _сайт портфолио_*/
+.col-4:last-child {
+    margin-right: 0px;
+    }
+
+/*.header-название класса, что бы выбрать цвет нужно нажать на ait+e======================*/
+.header {
+    background: #272a4e;
+    background-image: url(../img/site-foto/bg-header.jpg);
+/* Для фона прописываем свойство repeat что бы не повторялся */
+    background-repeat: no-repeat;
+/* позицианируем фон */
+    background-position: center;
+/* наш фон пропорционально растягивался и заполнял весь блок в нутри */
+    background-size: cover;
+/* высота vh-ед из ровна ед высоты окна браузера */
+    height: 100vh;
+    min-height: 400px;
+    /*задаем цвет текста заголовка*/
+    color:beige;
+    /*выравнивание текста по центру*/
+    text-align: center;
+    display: flex;
+    /*задаем колону*/
+    flex-direction: column;
+    /*выравнивание по горизонтали*/
+    align-items: center;
+    /*выравнивание по центу*/
+    justify-content: center;
+    position: relative;
+}
+
+.header__title {
+    /*размер шрифта*/
+    font-size: 56px;
+    /*высота строчки line-height: 130px*/
+    /*отступ снизу*/
+    margin-bottom: 30px;
+    /*использование шрифта*/
+    font-family: 'Merriweather', serif;
+    /*поднять блок на вверх*/
+    margin-top: -50px;
+}
+
+.header__slogan {
+    /*размер шрифта*/
+    font-size: 28px;
+    /*высота строчки*/
+    line-height: 42px;
+    
+}
+
+.header__arrow {
+    font-size: 48px;
+/*ширина*/
+    width: 60px;
+/*высота*/
+    height: 50px;
+/*отступ с лева*/
+    margin-left: -30px;
+/*выставляем позицию*/
+    position: absolute;
+/*указываем где будет расположен bottom-верз вниз,left: лево право*/
+    bottom: 50px;
+    left: 50%;
+}
+
+/* Portfolio ==============*/
+.portfolio {
+/* отступ внутренний верх-низ */
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.portfolio-item {
+    /* внешний отступ вниз */
+    margin-bottom: 20px;
+    
+    
+}
+
+.title {
+/* размер шрифта */
+    font-size: 50px;
+/* отступ снизу */
+    margin-bottom: 90px;
+/* подключаемый шрифт онлайн, если на хосте по каким то прич не будет определяться шрифт его подхватит из любого симейства serif */
+    font-family: 'Merriweather', serif;
+/*выравнивание текста по центру */
+    text-align: center;
+    
+}
+
+.portfolio-item__img {
+    margin-bottom: 17px;
+}
+
+.portfolio-item__img img {
+    max-width: 100%
+    height: auto;
+    
+}
+
+.portfolio-item__title {
+    font-size: 25px;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.portfolio-item__title a {
+    text-decoration: none;
+    color: black;
+    /*border-bottom: 1px solid #000;*/
+}
+
+.portfolio-item__title a:hover {
+    text-decoration: none;
+    color: #0052C2;
+    border-color: rgba(0, 82, 194, 0.3);
+    
+}
+
+.portfolio-item__text p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+/* portfolio sigle page ==============*/
+
+.portfolio-sigle-page {
+/*отступ с верху внутренний что бы картинка не прилипала к вверхнему края экрана*/    
+    padding-top: 50px;
+    /*что бы был отступ от сылки*/
+    padding-bottom:  50px;
+    /*выравниваем по центру*/
+    text-align: center;
+    
+}
+/*задаем отступ между картинкой и сылкой */
+.portfolio-sigle-page img {
+    margin-bottom: 50px;
+/*зададим что бы картинка не выходила за придела контейнера*/
+    max-width: 100%;
+/*высота автоматическая */
+    height: auto;
+/*что бы картинка отображалась как блок, для того что бы кнопка не становилась в одну линию с картинкой а перешла на след. строку */
+    /*display: block;*/
+    
+}
+/* кнопка которая будет возвращать пользователя назад */
+.button-back {
+    text-decoration: none;
+    font-weight: 700;
+    color: #061634;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: #061634;
+    border-style: solid;
+    border-radius: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 23px;
+    margin-bottom: 13px;
+
+    
+}
+
+.button-back:hover {
+    color: #fff;
+    background-color: #061634;
+    text-decoration: none;
+    
+}
+    
+
+
+/* footer ==============*/
+
+.footer {
+    background-color: #061634;
+    color: #6479a2;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+
+}
+
+.footer p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+p.footer__name {
+    font-size: 28px;
+    margin-bottom: 5px;
+    line-height: normal;
+    font-family: 'Merriweather', serif;
+}
+
+p.footer__social {
+    color: #FFF;
+    
+}
+
+p.footer__social-icons {
+    color: #FFF;
+    font-size: 32px;
+
+}
+
+p.footer__social-icons a {
+    color: #FFF;
+    margin-right: 30px;
+    text-decoration: none;
+    
+}
+/* псевдо клас */
+p.footer__social-icons a:last-child {
+    margin-right: 0px;
+    
+}
+
+p.footer__social-icons a:hover {
+    color: #FFE400;
+
+    
+}
+
+.button {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: #FFF;
+    border-style: solid;
+    border-radius: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-right: 23px;
+    margin-bottom: 13px;
+
+    
+}
+
+.button:hover {
+    color: #061634;
+    background-color: #fff;
+    text-decoration: none;
+    
+}
+
+/* media ==============*/
+
+/* при ширине экрана 1160px и менее - будет выполнен медиа запрос */
+@media (max-width: 1160px) {
+    .container {
+        width: 100%;
+    }
+    
+    .col-4 {
+        width: 100%; /*реальная ширина = width:100%; + border = 0 + padding-left: 15px;  + padding-right: 15; = */
+        margin: 0;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15;
+        text-align: center;
+    }
+    
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .header__title {
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 15px;
+        
+    }
+    
+    .header__slogan {
+        font-size: 22px;
+        line-height: 38px;
+    }
+    
+    .portfolio {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    
+    .title {
+        font-size: 36px;
+        
+    }
+    
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+}
